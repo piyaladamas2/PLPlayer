@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Music Player</title>
+      <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+      <header class="header">
+            <img src="./PlayList.svg" alt="playlist" id="playList" />
+            <h2><span>FEEL</span> the<span> MUSIC</span></h2>
+            <img src="./Music.svg" alt="music" id="musicImg" />
+      </header>
+      <main class="main">
+            <div class="leftPart">
+                  <div class="songImage">
+                        <!--<img src="./giphy.webp" alt="animation" id="songAnimation"/>-->
+                  </div>
+                  <div class="volumePart">
+                        <div class="volumeImage">
+                              <img src="./volume.svg" alt="volume" id="volume" onclick="volumeController()"/>
+                        </div>
+                        <input type="range"  id="volumeRange" onchange="volumeRange()"/>
+                  </div>
+            </div>
+            <div class="rightPart">
+                  <div class="details">
+                        <h3 id="songName"></h3>
+                        <h5 id="artistName"></h5>
+                  </div>
+                  <input type="range" id="duration" onchange="captureSong()"/>
+                  <div class="controls">
+                        <img src="./previous.svg" alt="previous" id="prev" onclick="prevMusic()"/>
+                        <img src="./play.svg" alt="play" id="play" onclick="controller()">
+                        <img src="./next.svg" alt="" id="next" onclick="nextMusic()">
+                  </div>
+            </div>
+      </main>
+      <script src="./index.js"></script>
+</body>
+
+</html>
